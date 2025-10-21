@@ -1,0 +1,12 @@
+
+:root
+{
+    --primary-color: #4CAF50;
+    --secondary-color: #ffffff;
+    --font-color: #333333;
+    --accent-color: #ff5722;
+}
+body {
+    background-color: var(--secondary-color);
+    font-family: system-ui;
+}
