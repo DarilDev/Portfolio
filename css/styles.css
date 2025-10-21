@@ -1,12 +1,15 @@
 
 :root
 {
-    --primary-color: #4CAF50;
+    --primary-color: #1173d4;
     --secondary-color: #ffffff;
     --font-color: #333333;
     --accent-color: #ff5722;
+    --background-light: #f6f7f8;
+    --background-dark: #101922;
 }
 body {
-    background-color: var(--secondary-color);
-    font-family: system-ui;
+    background-color: var( --background-dark);
+    font-family: Space Grotesk, sans-serif;
+    color: var( --secondary-color);
 }
