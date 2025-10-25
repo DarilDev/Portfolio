@@ -8,6 +8,7 @@
     --card-background: rgba(255, 255, 255, 0.05);
     --button-grey: #374151;
     --border-color: rgba(255, 255, 255, 0.1);
+    --background-perfil: #0f2b45;
 }
 
 * {
@@ -23,11 +24,17 @@ body {
     background-color: var(--background-dark);
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--secondary-color);
-    line-height: 1.6;
+    line-height: 1.4;
     min-height: 100vh;
+    max-width: 1400px;
 }
 .center{
     text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--secondary-color);
+
+    letter-spacing: -0.015em;
 }
 /* Header */
 .navigadorflex {
@@ -97,10 +104,8 @@ body {
 /* Main Section */
 main {
     padding: 80px 10%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-}
-
 .maindiv {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -193,15 +198,7 @@ main {
 }
 
 /* Título Proyectos Destacados - CENTRADO */
-main > h2 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin: 100px auto 60px;
-    letter-spacing: -0.015em;
-    position: relative;
-}
+
 
 main > h2::after {
     content: '';
@@ -223,6 +220,7 @@ main > h2::after {
     padding: 0 10%;
     max-width: 1400px;
     margin: 0 auto 100px;
+    transition: all 0.4s ease; /* transición suave */
 }
 
 .mainsection article {
@@ -235,6 +233,7 @@ main > h2::after {
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: all 0.4s ease;
 }
 
 .mainsection article:hover {
@@ -336,10 +335,16 @@ section p {
 }
 
 /* Lista de habilidades */
+.about{
+    background: var(--card-background);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+}
 section ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 0;
     margin: 30px 0;
@@ -404,10 +409,17 @@ section article a:hover svg {
 /* Sección de contacto */
 section:last-of-type {
     text-align: center;
-    background: var(--card-background);
-    border-radius: 20px;
     padding: 60px;
+}
+.perfiles{
+    background: var(--background-perfil);
+    border-radius: 20px;
+    padding: 40px;
     border: 1px solid var(--border-color);
+    display: block;
+    margin: 40px 0;
+    text-align: center;
+
 }
 
 section button {
@@ -475,6 +487,20 @@ footer small {
     }
 }
 
+@media (max-width: 1024px) {
+  .mainsection
+   {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive - Mobile */
+
+@media (max-width: 640px) {
+  .mainsection {
+    grid-template-columns: 1fr;
+  }
+}
 /* Responsive - Tablets */
 @media (max-width: 1024px) {
     .maindiv {
@@ -496,7 +522,6 @@ footer small {
         height: 400px;
         margin: 0 auto;
     }
-    
-    .mainsection {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+   
+        
+    }
